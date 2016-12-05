@@ -9,7 +9,7 @@ cd /home/container
 
 # Determine the latest version, or set the version to download.
 if [ -z "${VANILLA_VERSION}" ] || [ "${VANILLA_VERSION}" == "latest" ]; then
-    DL_VERSION=`curl -s https://s3.amazonaws.com/Minecraft.Download/versions/versions.json | grep -o "[[:digit:]]\.[0-9]*\.[0-9]" | head -n 1`
+    DL_VERSION=`curl https://launchermeta.mojang.com/mc/game/version_manifest.json | grep -o "[[:digit:]]\.[0-9.]*" | head -n 1`
 else
     DL_VERSION=${VANILLA_VERSION}
 fi
