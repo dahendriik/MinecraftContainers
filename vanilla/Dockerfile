@@ -21,6 +21,6 @@ ENV HOME=/home/container USER=container
 
 WORKDIR /home/container
 
-COPY ./entry.sh /entry.sh
+COPY entry.sh /entry.sh
 
 CMD ["/bin/bash", "/entry.sh"]
